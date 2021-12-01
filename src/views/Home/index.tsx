@@ -7,13 +7,14 @@ const JArr = [
         age: 360,
         style: {
             color: 'blue'
-        }
+        },
+        isShow: true
     },
     {
         name: '呼拉Ｊ',
         age: 240,
         style: {
-            color: 'yellow'
+            color: 'green'
         }
     },
     {
@@ -27,6 +28,7 @@ const forNameCard = JArr.map(props => (
         name = { props.name }
         age = { props.age }
         style = { props.style }
+        isShow = { props.isShow }
     />
 ));
 
