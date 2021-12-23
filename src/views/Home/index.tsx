@@ -1,5 +1,6 @@
 import React from 'react';
-import NameCard from '../../components/NameCard';
+import components from '../../components';
+const { NameCard } = components;
 
 const JArr = [
     {
