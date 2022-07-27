@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types'; // 引入props type checker
 import './App.css';
+import Counter from './components/Counter';
 const JArr = [
     {
         name: '大Ｊ',
@@ -44,7 +45,7 @@ NameCards.propTypes = {
 
 function App () {
     return (
-        <NameCards />
+        <Counter />
     );
 }
 

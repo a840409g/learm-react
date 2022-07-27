@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App.jsx';
-import Home from './views/Home/index.tsx';
+// import Home from './views/Home/index.tsx';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
     <React.StrictMode>
         <App />
-        <Home />
+        {/* <Home /> */}
     </React.StrictMode>,
     document.getElementById('root')
 );
