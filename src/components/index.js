@@ -1,8 +1,12 @@
-const component = require.context('.', true, /.tsx$/);
+const file = require.context('.', true, /.tsx$/);
 
-component.keys().forEach(file => {
-    const fileName = file.replace(/^\.\/(.*)\.\w+$/, '$1').split('/').shift();
-    const requiredFile = component(file).default;
+const components = file.keys().reduce((root, key) => {
+    const fileName = key.replace(/^\.\/(.*)\.\w+$/, '$1').split('/').shift();
+    const requiredFile = file(key).default;
 
-    module.exports[fileName] = requiredFile;
-});
+    root[fileName] = requiredFile;
+
+    return root;
+}, {});
+
+export default components;
